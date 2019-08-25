@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Entity">
+    <class name="Comment" table="comment">
+        <id name="num" column="num">
+            <generator class="native"></generator>
+        </id>
+        <property name="id" column="id"></property>
+        <property name="comment" column="comment"></property>
+        <property name="time" column="time"></property>
+        <property name="name" column="name"></property>
+    </class>
+</hibernate-mapping>

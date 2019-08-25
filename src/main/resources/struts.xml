@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="ssh" extends="json-default">
+        <action name="admin_*" class="Admin" method="{1}">
+            <result name="login" type="json">
+                <param name="root">isLogin</param>
+            </result>
+            <result name="getAdminInfo" type="json">
+                <param name="root">adminInfoByJson</param>
+            </result>
+            <result name="getCategoryList" type="json">
+                <param name="root">categoryListByJson</param>
+            </result>
+            <result name="addBlog" type="json">
+                <param name="root">isAddBlog</param>
+            </result>
+            <result name="editAdmin" type="json">
+                <param name="root">isEditAdmin</param>
+            </result>
+            <result name="getAllBlog" type="json">
+                <param name="root">blogList</param>
+            </result>
+            <result name="deleteBlog" type="json">
+                <param name="root">isDelete</param>
+            </result>
+            <result name="getEditBlogInfo" type="json">
+                <param name="root">blogInfo</param>
+            </result>
+            <result name="editBlog" type="json">
+                <param name="root">isEditBlog</param>
+            </result>
+        </action>
+
+        <action name="index_*" class="Index" method="{1}">
+            <result name="getAllBlog" type="json">
+                <param name="root">blogList</param>
+            </result>
+            <result name="getAllCategory" type="json">
+                <param name="root">categoryList</param>
+            </result>
+            <result name="getAllComment" type="json">
+                <param name="root">commentList</param>
+            </result>
+            <result name="getBlogListByCategory" type="json">
+                <param name="root">BlogListCategory</param>
+            </result>
+        </action>
+
+        <action name="search_*" class="Search" method="{1}">
+            <result name="searchBlogList" type="json">
+                <param name="root">searchBlog</param>
+            </result>
+        </action>
+
+        <action name="content_*" class="Content" method="{1}">
+            <result name="getCommentListByBlogId" type="json">
+                <param name="root">commentListById</param>
+            </result>
+            <result name="addComment" type="json">
+                <param name="root">isComment</param>
+            </result>
+            <result name="getBlog" type="json">
+                <param name="root">blogContent</param>
+            </result>
+        </action>
+
+        <action name="setting_*" class="Setting" method="{1}">
+            <result name="getSetting" type="json">
+                <param name="root">settingInfo</param>
+            </result>
+            <result name="editSetting" type="json">
+                <param name="root">isEditSetting</param>
+            </result>
+            <result name="getSettingInfo" type="json">
+                <param name="root">adminInfoByJson</param>
+            </result>
+        </action>
+    </package>
+</struts>

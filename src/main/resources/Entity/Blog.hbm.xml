@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Entity">
+    <class name="Blog" table="blog">
+        <id name="id" column="id">
+            <generator class="native"></generator>
+        </id>
+        <property name="title" column="title"></property>
+        <property name="body" column="body"></property>
+        <property name="category" column="category"></property>
+        <property name="time" column="time"></property>
+        <property name="mm" column="mm"></property>
+        <property name="yzmm" column="yzmm"></property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="Entity">
+    <class name="Setting" table="setting">
+        <id name="id" column="id"></id>
+        <property name="blogName" column="blog_name"></property>
+        <property name="mainblogName" column="mainblog_name"></property>
+        <property name="beian" column="beian"></property>
+        <property name="qq" column="qq"></property>
+        <property name="index1" column="index1"></property>
+        <property name="admin" column="admin"></property>
+    </class>
+</hibernate-mapping>
